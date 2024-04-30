@@ -80,19 +80,19 @@ char	*get_next_line(int fd)
 			buffer = NULL, (NULL));
 }
 
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*line;
+int	main(void)
+{
+	int		fd;
+	char	*line;
 
-// 	fd = open("get_next_line.c", O_RDONLY);
-// 	while (1)
-// 	{
-// 		line = get_next_line(fd);
-// 		if (line == NULL)
-// 			break ;
-// 		printf("line: %s", line);
-// 	}
-// 	close(fd);
-// 	return (0);
-// }
+	fd = open("get_next_line.c", O_RDONLY);
+	while (1)
+	{
+		line = get_next_line(fd);
+		if (line == NULL)
+			break ;
+		printf("line: %s", line);
+	}
+	close(fd);
+	return (0);
+}
