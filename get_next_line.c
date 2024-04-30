@@ -23,6 +23,7 @@ char	*stashed_line(char *line)
 	if (line[i] == '\0')
 		return (NULL);
 	left_string = ft_substr(line, i + 1, (ft_strlen(line) - i));
+	free(line);
 	if (*left_string == '\0')
 	{
 		free(left_string);
@@ -76,8 +77,7 @@ char	*get_next_line(int fd)
 		return (left_string = stashed_line(next_line), (next_line));
 	}
 	else
-		return (free(left_string), free(buffer), left_string = NULL,
-			buffer = NULL, (NULL));
+		return (free(left_string), free(buffer), (NULL));
 }
 
 int	main(void)
