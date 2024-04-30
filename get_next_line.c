@@ -23,7 +23,6 @@ char	*stashed_line(char *line)
 	if (line[i] == '\0')
 		return (NULL);
 	left_string = ft_substr(line, i + 1, (ft_strlen(line) - i));
-	free(line);
 	if (*left_string == '\0')
 	{
 		free(left_string);
